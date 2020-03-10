@@ -1,0 +1,69 @@
+Change Directory Set/Go             Last Update Sept 20/93
+by Glen Little
+
+Quick Intro:
+This package was put together to address a particular problem.  Often, while
+using a command prompt, I am in a subdirectory many levels deep when I
+realize that I want to switch from DOS to OS/2 or vice versa.
+
+With this package in place, I can simply type  CDS xxxx  from any prompt. Then
+switch to the prompt I want to use and type  CDG xxxx  to move to the same
+directory.
+
+This is also a simple quick change directory command to any directory you have
+previously stored. You can use any nickname you like for each directory.
+
+
+Contents:
+  READ.ME      This file...
+---------------DOS files
+  CDS.BAT      CD Save
+  CDG.EXE      CD Go
+  CDG.PAS      CD Go Pascal source
+  CDLIST.EXE   CD List
+  CDLIST.PAS   CD List Pascal source
+---------------OS/2 files
+  CDS.CMD      CD Save
+  CDG.CMD      CD Go
+  CDLIST.CMD   CD List
+
+
+Installation:
+  1. Add a line like this to CONFIG.SYS and each AUTOEXEC.BAT
+	SET CDSG=C:\TEMP\CDSG
+     This must be the name of an empty directory that will be used to store the
+     files created and used.  Each file will contain just one short line of text
+     so this directory will not take much room, even if it does contain many
+     files.
+  2. Copy the .BAT and .EXE files into a directory on your DOS path. Be sure
+     this directory is not on the OS/2 path, or is at least after the directory
+     used for the OS/2 CDSG files.
+  3. Copy the .CMD files into a directory on your OS/2 path.
+  4. To use immediately, you will now need to type the line shown in Step 1 in
+     both an OS/2 and DOS command prompt. After you reboot, this will be done
+     'automatically' for you.
+
+To Use:
+  At any command prompt, DOS or OS/2, you can save your current position (ie.
+  current drive and path) by typing  CDS xxxx  where xxxx is any Name.
+
+  The Name will be used as a filename. so follow the standard FAT restrictions
+  when specifying a name for CDS.  If you use HPFS in OS/2, CDS in OS/2 will
+  allow HPFS names to be used.  However, the DOS portion of CDSG will not be
+  able to access them.
+
+  At any time, at any prompt, from any directory, you may type  CDG xxxx  where
+  xxxx is any Name that was previously stored. If it is available to you, you
+  will be moved to the drive and directory that was current when xxxx was last
+  saved.
+
+  To see a list of what directories have been stored or saved, type CDLIST from
+  DOS or OS/2.
+
+
+
+Please feel free to modify this for your own non-profit purposes.
+
+Contact as of Sept 93:  internet: GLITTLE@BCSC02.gov.bc.ca
+			phone:	  604-660-0124
+
